@@ -4,11 +4,12 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 
 import { Cliente } from '../../model/Cliente';
 import { CommonModule, NgIf } from '@angular/common';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-cadastrar-clientes',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule], // ReactiveFormsModule deve ser importado aqui
+  imports: [ReactiveFormsModule, CommonModule, HeaderComponent], // ReactiveFormsModule deve ser importado aqui
   templateUrl: './cadastrar-clientes.component.html',
   styleUrls: ['./cadastrar-clientes.component.scss'], // Correção: "styleUrl" para "styleUrls"
 })
