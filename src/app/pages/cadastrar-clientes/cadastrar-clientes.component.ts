@@ -1,15 +1,33 @@
+import {
+  MatFormFieldModule,
+} from '@angular/material/form-field';
 import { Component } from '@angular/core';
 import { ClienteService } from '../../service/cliente.service';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 import { Cliente } from '../../model/Cliente';
 import { CommonModule, NgIf } from '@angular/common';
-import { HeaderComponent } from "../../components/header/header.component";
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-cadastrar-clientes',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, HeaderComponent], // ReactiveFormsModule deve ser importado aqui
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+    HeaderComponent,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+  ], // ReactiveFormsModule deve ser importado aqui
   templateUrl: './cadastrar-clientes.component.html',
   styleUrls: ['./cadastrar-clientes.component.scss'], // Correção: "styleUrl" para "styleUrls"
 })

@@ -4,46 +4,55 @@
   <h2>Cadastrar Novo Cliente</h2>
 </div>
 <div>
-  <form [formGroup]="clienteForm" (ngSubmit)="cadastrarNovoCliente()">
-    <div>
-      <label for="nome">Nome:</label>
+  <form [formGroup]="clienteForm" (ngSubmit)="cadastrarNovoCliente()" class="form-container">
+    <!-- Nome -->
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
       <input
+        matInput
         type="text"
-        id="nome"
         formControlName="nome"
         placeholder="Digite seu Nome"
         required
       />
-      <small *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched">
+      <mat-error *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched">
         Nome é obrigatório e deve ter pelo menos 3 caracteres.
-      </small>
-    </div>
-    <div>
-      <label for="idade">Idade:</label>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Idade -->
+    <mat-form-field appearance="outline">
+      <mat-label>Idade</mat-label>
       <input
+        matInput
         type="number"
-        id="idade"
         formControlName="idade"
         placeholder="Digite sua Idade"
         required
       />
-      <small *ngIf="clienteForm.get('idade')?.invalid && clienteForm.get('idade')?.touched">
+      <mat-error *ngIf="clienteForm.get('idade')?.invalid && clienteForm.get('idade')?.touched">
         Idade é obrigatória e deve ser maior que 0.
-      </small>
-    </div>
-    <div>
-      <label for="cidade">Cidade:</label>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Cidade -->
+    <mat-form-field appearance="outline">
+      <mat-label>Cidade</mat-label>
       <input
+        matInput
         type="text"
-        id="cidade"
         formControlName="cidade"
-        placeholder="Digite a sua Cidade"
+        placeholder="Digite sua Cidade"
         required
       />
-      <small *ngIf="clienteForm.get('cidade')?.invalid && clienteForm.get('cidade')?.touched">
+      <mat-error *ngIf="clienteForm.get('cidade')?.invalid && clienteForm.get('cidade')?.touched">
         Cidade é obrigatória e deve ter pelo menos 3 caracteres.
-      </small>
-    </div>
-    <button type="submit" [disabled]="clienteForm.invalid">Cadastrar</button>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Botão Cadastrar -->
+    <button mat-raised-button color="primary" type="submit" [disabled]="clienteForm.invalid">
+      Cadastrar
+    </button>
   </form>
 </div>
