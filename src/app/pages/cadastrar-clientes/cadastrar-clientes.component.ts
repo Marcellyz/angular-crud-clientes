@@ -16,6 +16,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { Cliente } from '../../model/Cliente';
 import { CommonModule, NgIf } from '@angular/common';
 import { HeaderComponent } from '../../components/header/header.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-clientes',
@@ -27,7 +28,8 @@ import { HeaderComponent } from '../../components/header/header.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-  ], // ReactiveFormsModule deve ser importado aqui
+    RouterLink
+  ],
   templateUrl: './cadastrar-clientes.component.html',
   styleUrls: ['./cadastrar-clientes.component.scss'], // Correção: "styleUrl" para "styleUrls"
 })

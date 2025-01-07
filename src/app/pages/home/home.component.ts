@@ -3,7 +3,7 @@ import { ListarClientesComponent } from "../listar-clientes/listar-clientes.comp
 
 @Component({
   selector: 'app-home',
-  imports: [ ListarClientesComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -1,10 +1,21 @@
 <app-header></app-header>
+<div class="container-info-cadastrar-cliente">
+  <div class="container-title">
+    <h2>Cadastrar Novo Cliente</h2>
+  </div>
 
-<div class="container-title">
-  <h2>Cadastrar Novo Cliente</h2>
+  <div class="btn-voltar">
+    <button mat-raised-button [routerLink]="'/listar-clientes'">
+      Voltar
+    </button>
+  </div>
 </div>
 <div>
-  <form [formGroup]="clienteForm" (ngSubmit)="cadastrarNovoCliente()" class="form-container">
+  <form
+    [formGroup]="clienteForm"
+    (ngSubmit)="cadastrarNovoCliente()"
+    class="form-container"
+  >
     <!-- Nome -->
     <mat-form-field appearance="outline">
       <mat-label>Nome</mat-label>
@@ -15,7 +26,11 @@
         placeholder="Digite seu Nome"
         required
       />
-      <mat-error *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched">
+      <mat-error
+        *ngIf="
+          clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched
+        "
+      >
         Nome é obrigatório e deve ter pelo menos 3 caracteres.
       </mat-error>
     </mat-form-field>
@@ -30,7 +45,11 @@
         placeholder="Digite sua Idade"
         required
       />
-      <mat-error *ngIf="clienteForm.get('idade')?.invalid && clienteForm.get('idade')?.touched">
+      <mat-error
+        *ngIf="
+          clienteForm.get('idade')?.invalid && clienteForm.get('idade')?.touched
+        "
+      >
         Idade é obrigatória e deve ser maior que 0.
       </mat-error>
     </mat-form-field>
@@ -45,13 +64,23 @@
         placeholder="Digite sua Cidade"
         required
       />
-      <mat-error *ngIf="clienteForm.get('cidade')?.invalid && clienteForm.get('cidade')?.touched">
+      <mat-error
+        *ngIf="
+          clienteForm.get('cidade')?.invalid &&
+          clienteForm.get('cidade')?.touched
+        "
+      >
         Cidade é obrigatória e deve ter pelo menos 3 caracteres.
       </mat-error>
     </mat-form-field>
 
     <!-- Botão Cadastrar -->
-    <button mat-raised-button color="primary" type="submit" [disabled]="clienteForm.invalid">
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="clienteForm.invalid"
+    >
       Cadastrar
     </button>
   </form>
