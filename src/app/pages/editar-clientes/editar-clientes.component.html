@@ -1,8 +1,8 @@
 <app-header></app-header>
 <div class="container">
-  <div class="container-info-cadastrar-cliente">
+  <div class="container-info-editar-cliente">
     <div class="container-title">
-      <h2>Cadastrar Novo Cliente</h2>
+      <h2>Editar Cliente</h2>
     </div>
 
     <div class="btn-voltar">
@@ -14,7 +14,7 @@
   <div>
     <form
       [formGroup]="clienteForm"
-      (ngSubmit)="cadastrarNovoCliente()"
+      (ngSubmit)="editarCliente()"
       class="form-container"
     >
       <!-- Nome -->
@@ -83,8 +83,9 @@
         type="submit"
         [disabled]="clienteForm.invalid"
       >
-        Cadastrar
+        Editar
       </button>
     </form>
   </div>
 </div>
+

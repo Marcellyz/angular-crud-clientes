@@ -1,0 +1,22 @@
+.container-info-editar-cliente{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.container-title{
+  margin-left:35px ;
+}
+
+.btn-voltar {
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 35px;
+  width: 50%;
+}
