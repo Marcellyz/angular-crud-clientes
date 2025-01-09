@@ -1,3 +1,3 @@
 export const environment = {
-  apiCliente:'https://localhost:8080/'
+  apiCliente:'http://localhost:8080/'
 };

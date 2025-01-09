@@ -14,6 +14,7 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-editar-clientes',
@@ -24,6 +25,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    NgIf
   ],
   templateUrl: './editar-clientes.component.html',
   styleUrl: './editar-clientes.component.scss',

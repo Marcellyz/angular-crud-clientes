@@ -1,7 +1,7 @@
 import {
   MatFormFieldModule,
 } from '@angular/material/form-field';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../../service/cliente.service';
 import {
   ReactiveFormsModule,
@@ -33,11 +33,17 @@ import { RouterLink } from '@angular/router';
   templateUrl: './cadastrar-clientes.component.html',
   styleUrls: ['./cadastrar-clientes.component.scss'], // Correção: "styleUrl" para "styleUrls"
 })
-export class CadastrarClientesComponent {
-  clienteForm: FormGroup; // Declarando o FormGroup para o formulário
+export class CadastrarClientesComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private clienteService: ClienteService) {
-    // Inicializando o FormGroup com campos e validações
+  clienteForm:FormGroup = new FormGroup({});
+
+  constructor(private fb: FormBuilder, private clienteService: ClienteService) {}
+
+  ngOnInit(){
+    this.initializeForm()
+  }
+
+  initializeForm(){
     this.clienteForm = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(3)]],
       idade: ['', [Validators.required, Validators.min(1)]],
