@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: '', redirectTo: 'listar-clientes', pathMatch: 'full' },
   { path: 'listar-clientes', component: ListarClientesComponent },
   { path: 'cadastrar-novo-cliente', component:  CadastrarClientesComponent },
-  { path: 'editar-clientes', component: EditarClientesComponent },
+  { path: 'editar-clientes/:id', component: EditarClientesComponent },
 ];
