@@ -15,7 +15,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgIf } from '@angular/common';
-import { error } from 'node:console';
 
 @Component({
   selector: 'app-editar-clientes',

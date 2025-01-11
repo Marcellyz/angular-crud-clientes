@@ -1,0 +1,15 @@
+<div class="container-delete">
+  <mat-card>
+    <mat-card-title>Excluir Cliente</mat-card-title>
+    <div>
+      <p>Tem certeza que deseja excluir esse cliente?</p>
+    </div>
+    <button mat-raised-button (click)="deletar()" color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="onCancel()">
+        Cancelar
+    </button>
+  </mat-card>
+</div>
