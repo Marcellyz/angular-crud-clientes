@@ -1,4 +1,4 @@
-# Angular Crud Clientes
+# Angular Crud Clientes 🌟🤩✔️
 
 Este projeto foi desenvolvido utilizando Angular na versão 19.0.6. Trata-se de um site que realiza gerenciamento de clientes. Nele possui as funções de Cadastrar Clientes(CREATE), Listar Clientes(READ), Editar Clientes(UPDATE) e Deletar Cliente (DELETE) 
   
@@ -35,6 +35,11 @@ src/
 ├── assets/
 └── ... (demais diretórios e arquivos)
 ```
+
+## 📽️ Projeto rodando...
+<div>
+<img align="center" src="/src/assets/angular-crud.gif">
+</div>
 
 ##  📋 Pré-requisitos
 
@@ -89,7 +94,7 @@ Os arquivos gerados estarão no diretório dist/. Você pode usar esses arquivos
 ## 🚀 API 
 Para clonar, configurar e executar a API.Certifique-se de ter os pré-requisitos instalados e configurados antes de começar.
 
-### Pré-requisitos da API
+### 📋 Pré-requisitos da API
 
 - Java JDK (versão 17.x)
 - Maven
@@ -97,12 +102,12 @@ Para clonar, configurar e executar a API.Certifique-se de ter os pré-requisitos
 - IDE de sua escolha(Eclipse, IntelliJ IDEA ou VS Code) 
 - Banco de Dados(MySQL)
 
-### Passo a Passo
+### ✔️ Passo a Passo
 
-1️⃣ Baixar o arquivo API
+### 1️⃣ Baixar o arquivo API
 Esse arquivo está na pasta Backend, presente nesse repositorio, entre na pasta e recorte o diretório com nome API e adicione na sua pasta de preferência.
 
-2️⃣ Configure o Arquivo `application.properties`
+### 2️⃣ Configure o Arquivo `application.properties`
 No diretório `src/main/resources`, localize o arquivo `application.properties`. Configure as propriedades do banco de dados e outras variáveis de ambiente, como:
 
 ```bash
@@ -118,7 +123,7 @@ server.port=8080
 - Substitua `nome_do_banco`,`seu_usuario` e `sua_senha` pelas suas credenciais,
 - Em seguida, certifique-se de que o banco esteja rodando;
 
-3️⃣ Compile o Projeto com o Maven
+### 3️⃣ Compile o Projeto com o Maven
 
 No terminal, compile o projeto para garantir que todas as dependências estejam instaladas corretamente:
 
@@ -126,7 +131,7 @@ No terminal, compile o projeto para garantir que todas as dependências estejam 
 mvn clean install
 ```
 
-4️⃣ Execute a aplicação
+### 4️⃣ Execute a aplicação
 
 Por ultimo execute a aplicação e verefique se ela funciona sem erros.
 
