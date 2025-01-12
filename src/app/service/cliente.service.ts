@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { environment } from '../../environments/environment.development';
-import { catchError, map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Cliente } from '../model/Cliente';
 
 @Injectable({
@@ -26,7 +26,7 @@ export class ClienteService {
   //método para editar os cliente
   editarCliente(cliente: Cliente): Observable<Cliente> {
     const urlId = `${this.url}${cliente.id}`;
-    return this.http.put<Cliente>(urlId, cliente)
+    return this.http.put<Cliente>(urlId, cliente);
   }
 
   // método para buscar cliente por ID

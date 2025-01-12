@@ -1,14 +1,12 @@
 import { Component, Input } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar'
-
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',
   imports: [MatToolbarModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-
-  @Input() ColorToolbar:string = 'background-color:#5b23f7';
+  @Input() ColorToolbar: string = 'background-color:#5b23f7';
 }

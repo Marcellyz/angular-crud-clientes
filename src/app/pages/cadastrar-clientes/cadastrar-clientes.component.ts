@@ -1,22 +1,20 @@
-import {
-  MatFormFieldModule,
-} from '@angular/material/form-field';
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../../components/header/header.component';
+import { RouterLink } from '@angular/router';
+
 import { ClienteService } from '../../service/cliente.service';
+import { Cliente } from '../../model/Cliente';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import {
   ReactiveFormsModule,
   FormBuilder,
   FormGroup,
   Validators,
 } from '@angular/forms';
-
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-
-import { Cliente } from '../../model/Cliente';
-import { CommonModule, NgIf } from '@angular/common';
-import { HeaderComponent } from '../../components/header/header.component';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-clientes',
@@ -28,22 +26,24 @@ import { RouterLink } from '@angular/router';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './cadastrar-clientes.component.html',
   styleUrls: ['./cadastrar-clientes.component.scss'], // Correção: "styleUrl" para "styleUrls"
 })
 export class CadastrarClientesComponent implements OnInit {
+  clienteForm: FormGroup = new FormGroup({});
 
-  clienteForm:FormGroup = new FormGroup({});
+  constructor(
+    private fb: FormBuilder,
+    private clienteService: ClienteService
+  ) {}
 
-  constructor(private fb: FormBuilder, private clienteService: ClienteService) {}
-
-  ngOnInit(){
-    this.initializeForm()
+  ngOnInit() {
+    this.initializeForm();
   }
 
-  initializeForm(){
+  initializeForm() {
     this.clienteForm = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(3)]],
       idade: ['', [Validators.required, Validators.min(1)]],

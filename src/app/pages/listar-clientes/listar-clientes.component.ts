@@ -1,12 +1,14 @@
-import { ClienteService } from './../../service/cliente.service';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink, RouterModule } from '@angular/router';
+
+import { ClienteService } from './../../service/cliente.service';
+import { Cliente } from '../../model/Cliente';
+
 import { HeaderComponent } from '../../components/header/header.component';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterLink, RouterModule } from '@angular/router';
-import { Cliente } from '../../model/Cliente';
-import { DeletarClientesComponent } from '../deletar-clientes/deletar-clientes.component';
 
 @Component({
   selector: 'app-listar-clientes',
@@ -24,7 +26,6 @@ import { DeletarClientesComponent } from '../deletar-clientes/deletar-clientes.c
 export class ListarClientesComponent implements OnInit {
   cliente: Cliente[];
 
-
   displayedColumns: string[] = ['id', 'nome', 'idade', 'cidade', 'actions'];
 
   constructor(private clienteService: ClienteService) {
@@ -36,6 +37,4 @@ export class ListarClientesComponent implements OnInit {
       .selecionarCliente()
       .subscribe((cliente) => (this.cliente = cliente));
   }
-
-
 }

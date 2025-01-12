@@ -2,40 +2,39 @@ table {
   width: 50%;
 }
 
-.container-info{
+.container-info {
   display: flex;
   justify-content: space-between;
 }
 
-.container-title{
-  margin-left:35px ;
+.container-title {
+  margin-left: 35px;
 }
 
-.btn-cadastro{
+.btn-cadastro {
   display: flex;
   align-items: center;
   margin-right: 35px;
 
-    button{
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #218838;
-      background-color: #fff;
-      color: #218838;
-      cursor: pointer;
-      transition: 0.4s;
-    }
-    button:hover{
-      background-color: #218838;
-      color:#fff;
-      border: 1px solid #218838;
-    }
+  button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #218838;
+    background-color: #fff;
+    color: #218838;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  button:hover {
+    background-color: #218838;
+    color: #fff;
+    border: 1px solid #218838;
+  }
 }
-
 
 .container-table {
   margin: 35px;
-  -webkit-box-shadow: 3px 6px 10px 10px rgba(207,207,207,1);
-  -moz-box-shadow: 3px 6px 10px 10px rgba(207,207,207,1);
-  box-shadow: 3px 6px 10px 10px rgba(207,207,207,1);
+  -webkit-box-shadow: 3px 6px 10px 10px rgba(207, 207, 207, 1);
+  -moz-box-shadow: 3px 6px 10px 10px rgba(207, 207, 207, 1);
+  box-shadow: 3px 6px 10px 10px rgba(207, 207, 207, 1);
 }
