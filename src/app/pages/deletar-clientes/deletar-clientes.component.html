@@ -1,15 +1,17 @@
 <div class="container-delete">
-  <mat-card>
+  <mat-card class="delete-card">
     <mat-card-title>Excluir Cliente</mat-card-title>
-    <div>
-      <p>Tem certeza que deseja excluir esse cliente?</p>
-    </div>
+    <mat-card-content>
+      <p class="delete-message">Tem certeza que deseja excluir esse cliente?</p>
+    </mat-card-content>
+  <mat-card-actions align="end" class="delete-actions">
     <button mat-raised-button (click)="deletar()" color="warn">
-        Excluir
-    </button>
+      Excluir
+  </button>
 
-    <button mat-raised-button (click)="onCancel()">
-        Cancelar
-    </button>
+  <button mat-raised-button (click)="onCancel()">
+      Cancelar
+  </button>
+  </mat-card-actions>
   </mat-card>
 </div>

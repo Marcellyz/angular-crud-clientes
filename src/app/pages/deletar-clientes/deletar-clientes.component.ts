@@ -4,11 +4,11 @@ import { ClienteService } from '../../service/cliente.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Cliente } from '../../model/Cliente';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule} from '@angular/material/card'
+import { MatCardActions, MatCardContent, MatCardModule} from '@angular/material/card'
 
 @Component({
   selector: 'app-deletar-clientes',
-  imports: [MatButtonModule, MatCardModule],
+  imports: [MatButtonModule, MatCardModule,MatCardContent],
   templateUrl: './deletar-clientes.component.html',
   styleUrl: './deletar-clientes.component.scss',
 })
